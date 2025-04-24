@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PsicoKenny.Educa</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Lora:wght@400;700&display=swap"
+    rel="stylesheet">
+
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+
+    .line {
+      transition: transform 0.3s ease, opacity 0.3s ease;
+    }
+
+    .rotate-45 {
+      transform: rotate(45deg) translateY(6px);
+    }
+
+    .-rotate-45 {
+      transform: rotate(-45deg) translateY(-6px);
+    }
+
+    .opacity-0 {
+      opacity: 0;
+    }
+
+    /* Ajuste para márgenes en vista responsive */
+    @media (max-width: 768px) {
+      .section-content {
+        padding-left: 20px;
+        padding-right: 20px;
+      }
+
+    }
+
+    /* Navbar */
+    nav {
+      background-color: #f4f4f4;
+      /* Color suave de fondo */
+    }
+
+    .navbar-text {
+      font-family: 'Lora', serif;
+      font-weight: bold;
+      color: #3f4143;
+    }
+
+    .menu-item {
+      color: #3f4143;
+      font-family: 'Roboto', sans-serif;
+      transition: color 0.3s;
+
+    }
+
+    .menu-item:hover {
+      color: #ABACAC;
+    }
+
+    /* Logo más pequeño */
+    .logo {
+      width: 60px;
+      /* Ajusta el tamaño del logo */
+      height: 60px;
+    }
+  </style>
+</head>
+
+<body class="bg-[#F9F5F6] text-[#E4E0E1]">
+
+  <!-- NAVBAR -->
+  <nav class="shadow-md fixed w-full z-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between h-16 items-center">
+        <div class="flex items-center">
+          <!-- Logo -->
+          <img src="/images/Logo.PNG" alt="Logo" class="logo mr-2">
+          <div class="navbar-text text-xl">Psicologa Kenny Conejeros Álvarez </div>
+        </div>
+        <div class="md:hidden">
+          <button id="menu-toggle" class="relative w-8 h-6 flex flex-col justify-between">
+            <span class="block h-1 bg-[#3f4143] rounded line" id="line1"></span>
+            <span class="block h-1 bg-[#3f4143] rounded line" id="line2"></span>
+            <span class="block h-1 bg-[#3f4143] rounded line" id="line3"></span>
+          </button>
+        </div>
+        <div class="hidden md:flex space-x-6 text-xl">
+          <a href="#inicio" class="hover:text-[#ABACAC] text-[#3f4143]">Inicio</a>
+          <a href="#sobre-mi" class="hover:text-[#ABACAC] text-[#3f4143]">Sobre mí</a>
+          <a href="#servicios" class="hover:text-[#ABACAC] text-[#3f4143]">Servicios</a>
+          <a href="#blog" class="hover:text-[#ABACAC] text-[#3f4143]">Blog</a>
+        </div>
+      </div>
+    </div>
+    <div id="mobile-menu"
+      class="hidden md:hidden flex flex-col items-center text-center px-4 pb-4 space-y-4 bg-[#f4f4f4]">
+      <a href="#inicio" class="text-xl text-[#3f4143] hover:text-[#ABACAC]">Inicio</a>
+      <a href="#sobre-mi" class="text-xl text-[#3f4143] hover:text-[#ABACAC]">Sobre mí</a>
+      <a href="#servicios" class="text-xl text-[#3f4143] hover:text-[#ABACAC]">Servicios</a>
+      <a href="#blog" class="text-xl text-[#3f4143] hover:text-[#ABACAC]">Blog</a>
+    </div>
+  </nav>
+
+  <!-- SECCIONES -->
+
+
+  <section id="inicio" class="relative h-screen pt-16">
+    <!-- Imagen de fondo -->
+    <img src="/images/image-section/inicio.jpg" alt="Bienestar emocional"
+      class="absolute inset-0 w-full h-full object-cover object-center z-0" />
+
+    <!-- Capa oscura para contraste -->
+    <div class="absolute inset-0 bg-black/40 z-10"></div>
+
+    <!-- Contenido -->
+    <div class="relative z-20 flex flex-col justify-center h-full px-6 md:px-16 lg:px-24">
+      <div class="max-w-2xl text-left">
+        <h1
+          class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4 leading-tight drop-shadow-lg max-w-xs sm:max-w-md md:max-w-xl">
+          Kenny Conejeros Álvarez.
+        </h1>
+        <p class="text-base sm:text-lg md:text-xl text-white leading-relaxed drop-shadow-md">
+          Psicóloga
+        </p>
+      </div>
+    </div>
+  </section>
+
+
+
+  <section id="sobre-mi" class="min-h-screen flex flex-col justify-center bg-[#F8E8EE] py-16 px-4">
+    <div
+      class="max-w-5xl mx-auto bg-white shadow-lg rounded-lg flex flex-col lg:flex-row items-center p-8 space-y-8 lg:space-y-0 lg:space-x-8">
+      <!-- Texto a la izquierda -->
+      <div class="lg:w-1/2">
+        <h2 class="text-3xl font-bold mb-4 text-[#494a49]">Sobre mí</h2>
+        <p class="text-lg text-[#494a49]">
+          Soy psicóloga con enfoque humanista, especializada en acompañamiento emocional y desarrollo personal.
+        </p>
+      </div>
+      <!-- Imagen a la derecha -->
+      <div class="lg:w-1/2 flex justify-center">
+        <img src="/images/image-section/sobre-mi.jpg" alt="Imagen sobre mí"
+          class="w-48 h-48 object-cover rounded-full border-4 border-[#FDCEDF]">
+      </div>
+    </div>
+
+    <!-- Bloque con 3 columnas -->
+    <div class="max-w-6xl mx-auto mt-12 grid grid-cols-1 md:grid-cols-3 gap-6 px-4">
+      <!-- Tarjeta 1 -->
+      <div class="bg-white rounded-lg shadow-md p-6 text-center">
+        <div class="mx-auto w-14 h-14 flex items-center justify-center rounded-full bg-[#FDCEDF] mb-4">
+          <svg class="w-6 h-6 text-[#AB4F6B]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l9-5-9-5-9 5 9 5z" />
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M12 14l6.16-3.422A12.083 12.083 0 0118 20H6a12.083 12.083 0 01-.16-9.422L12 14z" />
+          </svg>
+        </div>
+        <h3 class="text-xl font-semibold text-[#494a49] mb-2">Integradora</h3>
+        <a href="#" class="text-[#AB4F6B] font-medium hover:underline">Más información</a>
+      </div>
+
+      <!-- Tarjeta 2 -->
+      <div class="bg-white rounded-lg shadow-md p-6 text-center">
+        <div class="mx-auto w-14 h-14 flex items-center justify-center rounded-full bg-[#FDCEDF] mb-4">
+          <svg class="w-6 h-6 text-[#AB4F6B]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M8 10h.01M12 10h.01M16 10h.01M21 12c0 4.418-4.03 8-9 8s-9-3.582-9-8 4.03-8 9-8 9 3.582 9 8z" />
+          </svg>
+        </div>
+        <h3 class="text-xl font-semibold text-[#494a49] mb-2">Sesiones</h3>
+        <a href="#" class="text-[#AB4F6B] font-medium hover:underline">Más información</a>
+      </div>
+
+      <!-- Tarjeta 3 -->
+      <div class="bg-white rounded-lg shadow-md p-6 text-center">
+        <div class="mx-auto w-14 h-14 flex items-center justify-center rounded-full bg-[#FDCEDF] mb-4">
+          <svg class="w-6 h-6 text-[#AB4F6B]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M9.75 9.75L14.25 14.25M14.25 9.75L9.75 14.25M12 3a9 9 0 110 18 9 9 0 010-18z" />
+          </svg>
+        </div>
+        <h3 class="text-xl font-semibold text-[#494a49] mb-2">Terapia online</h3>
+        <a href="#" class="text-[#AB4F6B] font-medium hover:underline">Más información</a>
+      </div>
+    </div>
+
+  </section>
+
+
+
+
+  <section id="servicios" class="h-screen flex items-center justify-center bg-[#F9F5F6]">
+    <div class="max-w-2xl text-center section-content">
+      <h2 class="text-3xl font-bold mb-4 text-[#494a49]">Servicios</h2>
+      <p class="text-lg text-[#494a49]">Atención individual, talleres grupales, orientación en crisis y acompañamiento
+        psicológico online.</p>
+    </div>
+  </section>
+
+  <section class="relative px-4 py-12 bg-[#f4f4f4]">
+    <h2 class="text-3xl font-bold text-center text-[#494a49] mb-8">Blog</h2>
+
+    <!-- Flechas -->
+    <button id="prev"
+      class="absolute left-2 top-1/2 transform -translate-y-1/2 z-10 bg-white p-2 rounded-full shadow-md hover:bg-gray-100">
+      &#10094;
+    </button>
+    <button id="next"
+      class="absolute right-2 top-1/2 transform -translate-y-1/2 z-10 bg-white p-2 rounded-full shadow-md hover:bg-gray-100">
+      &#10095;
+    </button>
+
+    <!-- Carrusel centrado -->
+    <div class="overflow-hidden">
+      <div id="carousel" class="flex justify-center gap-6 overflow-x-auto scroll-smooth snap-x snap-mandatory px-6">
+        <!-- Card -->
+        <div class="w-[280px] md:w-[300px] flex-shrink-0 bg-white rounded-2xl shadow-lg overflow-hidden snap-center">
+          <img src="https://via.placeholder.com/600x300" class="w-full h-48 object-cover" />
+          <div class="p-4">
+            <h3 class="text-lg font-semibold text-[#494a49] mb-1">Ansiedad</h3>
+            <p class="text-gray-600 text-sm mb-3">Estrategias para enfrentarla con herramientas terapéuticas.</p>
+            <a href="#" class="inline-block px-4 py-2 bg-[#AB4F6B] text-white rounded-full text-sm">LEER ARTÍCULO</a>
+          </div>
+        </div>
+
+        <!-- Más cards -->
+        <div class="w-[280px] md:w-[300px] flex-shrink-0 bg-white rounded-2xl shadow-lg overflow-hidden snap-center">
+          <img src="https://via.placeholder.com/600x300" class="w-full h-48 object-cover" />
+          <div class="p-4">
+            <h3 class="text-lg font-semibold text-[#494a49] mb-1">Autoestima</h3>
+            <p class="text-gray-600 text-sm mb-3">Cultivar una relación sana contigo mismo/a.</p>
+            <a href="#" class="inline-block px-4 py-2 bg-[#AB4F6B] text-white rounded-full text-sm">LEER ARTÍCULO</a>
+          </div>
+        </div>
+
+        <div class="w-[280px] md:w-[300px] flex-shrink-0 bg-white rounded-2xl shadow-lg overflow-hidden snap-center">
+          <img src="https://via.placeholder.com/600x300" class="w-full h-48 object-cover" />
+          <div class="p-4">
+            <h3 class="text-lg font-semibold text-[#494a49] mb-1">Mindfulness</h3>
+            <p class="text-gray-600 text-sm mb-3">Prácticas de atención plena para el bienestar emocional.</p>
+            <a href="#" class="inline-block px-4 py-2 bg-[#AB4F6B] text-white rounded-full text-sm">LEER ARTÍCULO</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <footer class="bg-[#f4f4f4] text-[#494a49] py-10 px-6">
+    <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 items-start text-center md:text-left">
+
+      <!-- Izquierda: Enlaces -->
+      <div>
+        <h3 class="font-semibold text-lg mb-4">Enlaces</h3>
+        <ul class="space-y-2">
+          <li><a href="#inicio" class="hover:underline">Inicio</a></li>
+          <li><a href="#sobre-mi" class="hover:underline">Sobre mí</a></li>
+          <li><a href="#servicios" class="hover:underline">Servicios</a></li>
+          <li><a href="#blog" class="hover:underline">Blog</a></li>
+        </ul>
+      </div>
+
+      <!-- Centro: Logo y redes -->
+      <div class="flex flex-col items-center">
+        <img src="/images/Logo.PNG" alt="Logo Psicología" class="mb-4 rounded-full">
+        <div class="flex space-x-4">
+          <a href="#" class="text-[#AB4F6B] hover:text-[#82384f]"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" class="text-[#AB4F6B] hover:text-[#82384f]"><i class="fab fa-instagram"></i></a>
+          <a href="#" class="text-[#AB4F6B] hover:text-[#82384f]"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+      </div>
+
+      <!-- Derecha: WhatsApp -->
+      <div class="flex justify-center md:justify-end items-start">
+        <a href="https://wa.me/56972524249" target="_blank"
+          class="inline-block bg-[#25D366] hover:bg-[#1ebc57] text-white px-5 py-2 rounded-full shadow-md text-sm">
+          <i class="fab fa-whatsapp mr-2"></i> Contáctame por WhatsApp
+        </a>
+      </div>
+    </div>
+
+    <div class="mt-10 text-sm text-center text-gray-500">&copy; 2025 Kenny Conejeros Álvarez. Todos los derechos
+      reservados.</div>
+  </footer>
+  <!-- SCRIPT -->
+  <script>
+    const toggleBtn = document.getElementById('menu-toggle');
+    const menu = document.getElementById('mobile-menu');
+    const line1 = document.getElementById('line1');
+    const line2 = document.getElementById('line2');
+    const line3 = document.getElementById('line3');
+
+    toggleBtn.addEventListener('click', () => {
+      menu.classList.toggle('hidden');
+      line1.classList.toggle('rotate-45');
+      line2.classList.toggle('opacity-0');
+      line3.classList.toggle('-rotate-45');
+    });
+
+    document.querySelectorAll('#mobile-menu a').forEach(link => {
+      link.addEventListener('click', () => {
+        menu.classList.add('hidden');
+        line1.classList.remove('rotate-45');
+        line2.classList.remove('opacity-0');
+        line3.classList.remove('-rotate-45');
+      });
+    });
+  </script>
+
+  <script>
+    const carousel = document.getElementById('carousel');
+    const next = document.getElementById('next');
+    const prev = document.getElementById('prev');
+
+    next.addEventListener('click', () => {
+      carousel.scrollBy({ left: 320, behavior: 'smooth' });
+    });
+
+    prev.addEventListener('click', () => {
+      carousel.scrollBy({ left: -320, behavior: 'smooth' });
+    });
+  </script>
+
+  <script src="https://kit.fontawesome.com/tu_id_de_kit.js" crossorigin="anonymous"></script>
+
+</body>
+
+</html>

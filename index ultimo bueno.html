@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PsicoKenny.Educa</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Lora:wght@400;700&display=swap"
+    rel="stylesheet">
+
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+
+    .line {
+      transition: transform 0.3s ease, opacity 0.3s ease;
+    }
+
+    .rotate-45 {
+      transform: rotate(45deg) translateY(6px);
+    }
+
+    .-rotate-45 {
+      transform: rotate(-45deg) translateY(-6px);
+    }
+
+    .opacity-0 {
+      opacity: 0;
+    }
+
+    /* Ajuste para márgenes en vista responsive */
+    @media (max-width: 768px) {
+      .section-content {
+        padding-left: 20px;
+        padding-right: 20px;
+      }
+
+    }
+
+    /* Navbar */
+    nav {
+      background-color: #f4f4f4;
+      /* Color suave de fondo */
+    }
+
+    .navbar-text {
+      font-family: 'Lora', serif;
+      font-weight: bold;
+      color: #3f4143;
+    }
+
+    .menu-item {
+      color: #3f4143;
+      font-family: 'Roboto', sans-serif;
+      transition: color 0.3s;
+
+    }
+
+    .menu-item:hover {
+      color: #ABACAC;
+    }
+
+    /* Logo más pequeño */
+    .logo {
+      width: 60px;
+      /* Ajusta el tamaño del logo */
+      height: 60px;
+    }
+  </style>
+</head>
+
+<body class="bg-[#F9F5F6] text-[#E4E0E1]">
+
+  <!-- NAVBAR -->
+  <nav class="shadow-md fixed w-full z-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between h-16 items-center">
+        <div class="flex items-center">
+          <!-- Logo -->
+          <img src="/images/Logo.PNG" alt="Logo" class="logo mr-2">
+          <div class="navbar-text text-xl">Psicologa Kenny Conejeros Álvarez </div>
+        </div>
+        <div class="md:hidden">
+          <button id="menu-toggle" class="relative w-8 h-6 flex flex-col justify-between">
+            <span class="block h-1 bg-[#3f4143] rounded line" id="line1"></span>
+            <span class="block h-1 bg-[#3f4143] rounded line" id="line2"></span>
+            <span class="block h-1 bg-[#3f4143] rounded line" id="line3"></span>
+          </button>
+        </div>
+        <div class="hidden md:flex space-x-6 text-xl">
+          <a href="#inicio" class="hover:text-[#ABACAC] text-[#3f4143]">Inicio</a>
+          <a href="#sobre-mi" class="hover:text-[#ABACAC] text-[#3f4143]">Sobre mí</a>
+          <a href="#servicios" class="hover:text-[#ABACAC] text-[#3f4143]">Servicios</a>
+          <a href="#blog" class="hover:text-[#ABACAC] text-[#3f4143]">Blog</a>
+        </div>
+      </div>
+    </div>
+    <div id="mobile-menu"
+      class="hidden md:hidden flex flex-col items-center text-center px-4 pb-4 space-y-4 bg-[#f4f4f4]">
+      <a href="#inicio" class="text-xl text-[#3f4143] hover:text-[#ABACAC]">Inicio</a>
+      <a href="#sobre-mi" class="text-xl text-[#3f4143] hover:text-[#ABACAC]">Sobre mí</a>
+      <a href="#servicios" class="text-xl text-[#3f4143] hover:text-[#ABACAC]">Servicios</a>
+      <a href="#blog" class="text-xl text-[#3f4143] hover:text-[#ABACAC]">Blog</a>
+    </div>
+  </nav>
+
+  <!-- SECCIONES -->
+
+  
+  <section id="inicio" class="relative h-screen pt-16">
+    <!-- Imagen de fondo -->
+    <img src="/images/image-section/inicio.jpg" alt="Bienestar emocional" class="absolute inset-0 w-full h-full object-cover object-center z-0" />
+  
+    <!-- Capa oscura para contraste -->
+    <div class="absolute inset-0 bg-black/40 z-10"></div>
+  
+    <!-- Contenido -->
+    <div class="relative z-20 flex flex-col justify-center h-full px-6 md:px-16 lg:px-24">
+      <div class="max-w-2xl text-left">
+        <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4 leading-tight drop-shadow-lg max-w-xs sm:max-w-md md:max-w-xl">
+          Kenny Conejeros Álvarez.
+        </h1>        
+        <p class="text-base sm:text-lg md:text-xl text-white leading-relaxed drop-shadow-md">
+          Psicóloga
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section id="sobre-mi" class="h-screen flex items-center justify-center bg-[#F8E8EE]">
+    <div class="max-w-2xl text-center section-content">
+      <h2 class="text-3xl font-bold mb-4 text-[#494a49]">Sobre mí</h2>
+      <p class="text-lg text-[#494a49]">Soy psicóloga con enfoque humanista, especializada en acompañamiento emocional y
+        desarrollo personal.</p>
+    </div>
+  </section>
+  
+
+  <section id="servicios" class="h-screen flex items-center justify-center bg-[#F9F5F6]">
+    <div class="max-w-2xl text-center section-content">
+      <h2 class="text-3xl font-bold mb-4 text-[#494a49]">Servicios</h2>
+      <p class="text-lg text-[#494a49]">Atención individual, talleres grupales, orientación en crisis y acompañamiento
+        psicológico online.</p>
+    </div>
+  </section>
+
+  <section id="blog" class="h-screen flex items-center justify-center bg-[#F8E8EE]">
+    <div class="max-w-2xl text-center section-content">
+      <h2 class="text-3xl font-bold mb-4 text-[#494a49]">Blog</h2>
+      <p class="text-lg text-[#494a49]">Lecturas para reflexionar, crecer y conectar con tu mundo interno.</p>
+    </div>
+  </section>
+
+  <!-- SCRIPT -->
+  <script>
+    const toggleBtn = document.getElementById('menu-toggle');
+    const menu = document.getElementById('mobile-menu');
+    const line1 = document.getElementById('line1');
+    const line2 = document.getElementById('line2');
+    const line3 = document.getElementById('line3');
+
+    toggleBtn.addEventListener('click', () => {
+      menu.classList.toggle('hidden');
+      line1.classList.toggle('rotate-45');
+      line2.classList.toggle('opacity-0');
+      line3.classList.toggle('-rotate-45');
+    });
+
+    document.querySelectorAll('#mobile-menu a').forEach(link => {
+      link.addEventListener('click', () => {
+        menu.classList.add('hidden');
+        line1.classList.remove('rotate-45');
+        line2.classList.remove('opacity-0');
+        line3.classList.remove('-rotate-45');
+      });
+    });
+  </script>
+
+</body>
+
+</html>
