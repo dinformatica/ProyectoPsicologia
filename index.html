@@ -71,6 +71,19 @@
       /* Ajusta el tamaño del logo */
       height: 60px;
     }
+
+    /* Ocultar scroll horizontal */
+    .hide-scrollbar {
+      scrollbar-width: none;
+      /* Firefox */
+      -ms-overflow-style: none;
+      /* IE 10+ */
+    }
+
+    .hide-scrollbar::-webkit-scrollbar {
+      display: none;
+      /* Chrome, Safari */
+    }
   </style>
 </head>
 
@@ -208,24 +221,15 @@
     </div>
   </section>
 
-  <section class="relative px-4 py-12 bg-[#f4f4f4]">
+  <section id="blog" class="px-4 py-12 bg-[#f4f4f4]">
     <h2 class="text-3xl font-bold text-center text-[#494a49] mb-8">Blog</h2>
 
-    <!-- Flechas -->
-    <button id="prev"
-      class="absolute left-2 top-1/2 transform -translate-y-1/2 z-10 bg-white p-2 rounded-full shadow-md hover:bg-gray-100">
-      &#10094;
-    </button>
-    <button id="next"
-      class="absolute right-2 top-1/2 transform -translate-y-1/2 z-10 bg-white p-2 rounded-full shadow-md hover:bg-gray-100">
-      &#10095;
-    </button>
-
-    <!-- Carrusel centrado -->
+    <!-- Carrusel centrado sin flechas -->
     <div class="overflow-hidden">
-      <div id="carousel" class="flex justify-center gap-6 overflow-x-auto scroll-smooth snap-x snap-mandatory px-6">
-        <!-- Card -->
-        <div class="w-[280px] md:w-[300px] flex-shrink-0 bg-white rounded-2xl shadow-lg overflow-hidden snap-center">
+      <div id="carousel"
+        class="flex justify-center gap-6 overflow-x-auto scroll-smooth snap-x snap-mandatory px-6 hide-scrollbar">
+        <!-- Card 1 -->
+        <div class="w-[260px] sm:w-[280px] flex-shrink-0 bg-white rounded-2xl shadow-lg overflow-hidden snap-center">
           <img src="images/image-gallery/image_1.jpg" class="w-full h-48 object-cover" />
           <div class="p-4">
             <h3 class="text-lg font-semibold text-[#494a49] mb-1">Ansiedad</h3>
@@ -234,8 +238,8 @@
           </div>
         </div>
 
-        <!-- Más cards -->
-        <div class="w-[280px] md:w-[300px] flex-shrink-0 bg-white rounded-2xl shadow-lg overflow-hidden snap-center">
+        <!-- Card 2 -->
+        <div class="w-[260px] sm:w-[280px] flex-shrink-0 bg-white rounded-2xl shadow-lg overflow-hidden snap-center">
           <img src="images/image-gallery/image_2.jpg" class="w-full h-48 object-cover" />
           <div class="p-4">
             <h3 class="text-lg font-semibold text-[#494a49] mb-1">Autoestima</h3>
@@ -244,7 +248,8 @@
           </div>
         </div>
 
-        <div class="w-[280px] md:w-[300px] flex-shrink-0 bg-white rounded-2xl shadow-lg overflow-hidden snap-center">
+        <!-- Card 3 -->
+        <div class="w-[260px] sm:w-[280px] flex-shrink-0 bg-white rounded-2xl shadow-lg overflow-hidden snap-center">
           <img src="images/image-gallery/image_3.jpg" class="w-full h-48 object-cover" />
           <div class="p-4">
             <h3 class="text-lg font-semibold text-[#494a49] mb-1">Mindfulness</h3>
@@ -256,47 +261,79 @@
     </div>
   </section>
 
+
+
   <section id="galeria" class="bg-white py-16 px-6">
-  <div class="max-w-6xl mx-auto text-center mb-12">
-    <h2 class="text-3xl font-bold text-[#494a49] mb-2">Galería</h2>
-    <p class="text-gray-600">Un vistazo a mi espacio y momentos de acompañamiento emocional.</p>
-  </div>
-
-  <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-    <!-- Imagen 1 -->
-    <div class="overflow-hidden rounded-2xl shadow-md">
-      <img src="images/image-gallery/image_1.jpg" alt="Galería 1" class="w-full h-60 object-cover hover:scale-105 transition-transform duration-300">
+    <div class="max-w-6xl mx-auto text-center mb-12">
+      <h2 class="text-3xl font-bold text-[#494a49] mb-2">Galería</h2>
+      <p class="text-gray-600">Un vistazo a mi espacio y momentos de acompañamiento emocional.</p>
     </div>
 
-    <!-- Imagen 2 -->
-    <div class="overflow-hidden rounded-2xl shadow-md">
-      <img src="images/image-gallery/image_2.jpg" alt="Galería 2" class="w-full h-60 object-cover hover:scale-105 transition-transform duration-300">
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+      <!-- Imagen 1 -->
+      <div class="overflow-hidden rounded-2xl shadow-md">
+        <img src="images/image-gallery/image_1.jpg" alt="Galería 1"
+          class="w-full h-60 object-cover hover:scale-105 transition-transform duration-300 cursor-pointer"
+          onclick="openLightbox(this.src)">
+      </div>
+
+      <!-- Imagen 2 -->
+      <div class="overflow-hidden rounded-2xl shadow-md">
+        <img src="images/image-gallery/image_2.jpg" alt="Galería 2"
+          class="w-full h-60 object-cover hover:scale-105 transition-transform duration-300 cursor-pointer"
+          onclick="openLightbox(this.src)">
+      </div>
+
+      <!-- Imagen 3 -->
+      <div class="overflow-hidden rounded-2xl shadow-md">
+        <img src="images/image-gallery/image_3.jpg" alt="Galería 3"
+          class="w-full h-60 object-cover hover:scale-105 transition-transform duration-300 cursor-pointer"
+          onclick="openLightbox(this.src)">
+      </div>
+
+      <!-- Imagen 4 -->
+      <div class="overflow-hidden rounded-2xl shadow-md">
+        <img src="images/image-gallery/image_4.jpg" alt="Galería 4"
+          class="w-full h-60 object-cover hover:scale-105 transition-transform duration-300 cursor-pointer"
+          onclick="openLightbox(this.src)">
+      </div>
+
+      <!-- Imagen 5 -->
+      <div class="overflow-hidden rounded-2xl shadow-md">
+        <img src="images/image-gallery/image_1.jpg" alt="Galería 5"
+          class="w-full h-60 object-cover hover:scale-105 transition-transform duration-300 cursor-pointer"
+          onclick="openLightbox(this.src)">
+      </div>
+
+      <!-- Imagen 6 -->
+      <div class="overflow-hidden rounded-2xl shadow-md">
+        <img src="images/image-gallery/image_2.jpg" alt="Galería 6"
+          class="w-full h-60 object-cover hover:scale-105 transition-transform duration-300 cursor-pointer"
+          onclick="openLightbox(this.src)">
+      </div>
+
+      <!-- Imagen 7 -->
+      <div class="overflow-hidden rounded-2xl shadow-md">
+        <img src="images/image-gallery/image_1.jpg" alt="Galería 7"
+          class="w-full h-60 object-cover hover:scale-105 transition-transform duration-300 cursor-pointer"
+          onclick="openLightbox(this.src)">
+      </div>
     </div>
 
-    <!-- Imagen 3 -->
-    <div class="overflow-hidden rounded-2xl shadow-md">
-      <img src="images/image-gallery/image_3.jpg" alt="Galería 3" class="w-full h-60 object-cover hover:scale-105 transition-transform duration-300">
+    <!-- Lightbox (agregado al final del <body>) -->
+    <div id="lightbox"
+      class="fixed inset-0 bg-black bg-opacity-80 hidden flex items-center justify-center z-50 transition-opacity duration-300">
+      <div id="lightbox-content"
+        class="transform scale-95 opacity-0 transition-all duration-300 ease-out max-w-[90vw] max-h-[90vh]">
+        <img id="lightbox-img" src="" class="rounded-lg shadow-xl max-w-full max-h-[90vh]" />
+      </div>
+      <button onclick="closeLightbox()"
+        class="absolute top-6 right-6 text-white text-3xl font-bold hover:text-[#AB4F6B] transition-colors duration-300">&times;</button>
     </div>
 
-    <!-- Imagen 4 -->
-    <div class="overflow-hidden rounded-2xl shadow-md">
-      <img src="images/image-gallery/image_4.jpg" alt="Galería 4" class="w-full h-60 object-cover hover:scale-105 transition-transform duration-300">
-    </div>
-
-    <!-- Imagen 5 -->
-    <div class="overflow-hidden rounded-2xl shadow-md">
-      <img src="images/image-gallery/image_1.jpg" alt="Galería 5" class="w-full h-60 object-cover hover:scale-105 transition-transform duration-300">
-    </div>
-
-    <!-- Imagen 6 -->
-    <div class="overflow-hidden rounded-2xl shadow-md">
-      <img src="images/image-gallery/image_2.jpg" alt="Galería 6" class="w-full h-60 object-cover hover:scale-105 transition-transform duration-300">
-    </div>
-  </div>
-</section>
+  </section>
 
 
-  
   <footer class="bg-[#f4f4f4] text-[#494a49] py-10 px-6">
     <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 items-start text-center md:text-left">
 
@@ -333,6 +370,7 @@
     <div class="mt-10 text-sm text-center text-gray-500">&copy; 2025 Kenny Conejeros Álvarez. Todos los derechos
       reservados.</div>
   </footer>
+
   <!-- SCRIPT -->
   <script>
     const toggleBtn = document.getElementById('menu-toggle');
@@ -360,17 +398,51 @@
 
   <script>
     const carousel = document.getElementById('carousel');
-    const next = document.getElementById('next');
-    const prev = document.getElementById('prev');
-
-    next.addEventListener('click', () => {
-      carousel.scrollBy({ left: 320, behavior: 'smooth' });
-    });
-
-    prev.addEventListener('click', () => {
-      carousel.scrollBy({ left: -320, behavior: 'smooth' });
-    });
+    document.getElementById('prev').onclick = () => {
+      carousel.scrollBy({ left: -300, behavior: 'smooth' });
+    };
+    document.getElementById('next').onclick = () => {
+      carousel.scrollBy({ left: 300, behavior: 'smooth' });
+    };
   </script>
+
+  <script>
+    function openLightbox(src) {
+      const lightbox = document.getElementById("lightbox");
+      const content = document.getElementById("lightbox-content");
+      const img = document.getElementById("lightbox-img");
+
+      img.src = src;
+      lightbox.classList.remove("hidden");
+
+      // Forzar render para permitir animación
+      requestAnimationFrame(() => {
+        content.classList.remove("opacity-0", "scale-95");
+        content.classList.add("opacity-100", "scale-100");
+      });
+
+      document.body.classList.add("overflow-hidden");
+    }
+
+    function closeLightbox() {
+      const lightbox = document.getElementById("lightbox");
+      const content = document.getElementById("lightbox-content");
+
+      content.classList.remove("opacity-100", "scale-100");
+      content.classList.add("opacity-0", "scale-95");
+
+      // Esperar animación antes de ocultar
+      setTimeout(() => {
+        lightbox.classList.add("hidden");
+        document.getElementById("lightbox-img").src = "";
+      }, 300);
+
+      document.body.classList.remove("overflow-hidden");
+    }
+  </script>
+
+
+
 
   <script src="https://kit.fontawesome.com/tu_id_de_kit.js" crossorigin="anonymous"></script>
 
