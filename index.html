@@ -149,8 +149,6 @@
     </div>
   </section>
 
-
-
   <section id="sobre-mi" class="min-h-screen flex flex-col justify-center bg-[#F8E8EE] py-16 px-4">
     <div
       class="max-w-5xl mx-auto bg-white shadow-lg rounded-lg flex flex-col lg:flex-row items-center p-8 space-y-8 lg:space-y-0 lg:space-x-8">
@@ -158,7 +156,14 @@
       <div class="lg:w-1/2">
         <h2 class="text-3xl font-bold mb-4 text-[#494a49]">Sobre mí</h2>
         <p class="text-lg text-[#494a49]">
-          Soy psicóloga con enfoque humanista, especializada en acompañamiento emocional y desarrollo personal.
+          Mi nombre es Kenny Conejeros Álvarez, psicóloga de profesión con experiencia en el área clínica y deportiva. A
+          lo largo de mi trayectoria, he complementado mi formación con diplomados en Evaluación e Intervención para el
+          Abordaje Integral de las Necesidades Educativas Especiales en la Edad Escolar, y en Convivencia Libre de
+          Violencia en la Familia, el Trabajo y la Escuela.
+        </p>
+        <p class="text-lg text-[#494a49]">
+          Mi objetivo en terapia es brindar un espacio seguro, de contención y validación emocional, donde cada persona
+          pueda sentirse escuchada y acompañada en su proceso.
         </p>
       </div>
       <!-- Imagen a la derecha -->
@@ -210,26 +215,79 @@
 
   </section>
 
+  <section id="servicios" class="w-full bg-white py-20 px-4">
+    <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-10 items-center">
 
+      <!-- Texto -->
+      <div class="space-y-6">
+        <h2 class="text-3xl md:text-4xl font-semibold text-gray-800">
+          Terapia presencial para niñas, niños y adolescentes
+        </h2>
+        <p class="text-lg text-gray-600">
+          Si tienes dudas o no sabes exactamente qué te sucede, puedes comunicarte con nosotros para agendar tu sesión.
+        </p>
+        <a href="https://wa.me/56979461343" target="_blank"
+          class="inline-block bg-[#AB4F6B] hover:bg-[#933d56] text-white px-6 py-3 rounded-lg text-lg font-medium transition-colors duration-300">
+          Agenda tu sesión aquí
+        </a>
+      </div>
 
+      <!-- Imagen con efecto y altura más alta -->
+      <div class="relative group overflow-hidden rounded-xl shadow-lg h-[26rem] lg:h-[32rem]">
+        <img src="images/image-gallery/image_1.jpg" alt="Terapia"
+          class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
+        <div class="absolute inset-0 bg-black bg-opacity-20 group-hover:bg-opacity-40 transition duration-300"></div>
+      </div>
 
-  <section id="servicios" class="h-screen flex items-center justify-center bg-[#F9F5F6]">
-    <div class="max-w-2xl text-center section-content">
-      <h2 class="text-3xl font-bold mb-4 text-[#494a49]">Servicios</h2>
-      <p class="text-lg text-[#494a49]">Atención individual, talleres grupales, orientación en crisis y acompañamiento
-        psicológico online.</p>
+    </div>
+
+    <!-- Motivos de consulta -->
+    <div class="max-w-5xl mx-auto mt-16">
+      <h3 class="text-2xl font-semibold text-center text-gray-800 mb-6">
+        Algunos de los motivos de consulta que atiendo son:
+      </h3>
+      <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-4 text-center text-gray-700">
+        <div class="bg-[#F7F7F7] p-4 rounded-xl shadow-sm">Ansiedad o miedos</div>
+        <div class="bg-[#F7F7F7] p-4 rounded-xl shadow-sm">Dificultades escolares</div>
+        <div class="bg-[#F7F7F7] p-4 rounded-xl shadow-sm">Cambios familiares</div>
+        <div class="bg-[#F7F7F7] p-4 rounded-xl shadow-sm">Problemas de conducta</div>
+        <div class="bg-[#F7F7F7] p-4 rounded-xl shadow-sm">Autoestima</div>
+        <div class="bg-[#F7F7F7] p-4 rounded-xl shadow-sm">Habilidades sociales</div>
+      </div>
+    </div>
+
+    <!-- Tarifas -->
+    <div class="max-w-5xl mx-auto mt-16 grid md:grid-cols-3 gap-6 text-center">
+      <div class="bg-[#FFF0F3] p-6 rounded-2xl shadow-md">
+        <h4 class="text-xl font-semibold text-[#AB4F6B] mb-2">Terapia para niños</h4>
+        <p class="text-gray-700"><strong>$30.000 CLP</strong> / sesión</p>
+      </div>
+      <div class="bg-[#FFF0F3] p-6 rounded-2xl shadow-md">
+        <h4 class="text-xl font-semibold text-[#AB4F6B] mb-2">Terapia para niñas</h4>
+        <p class="text-gray-700"><strong>$30.000 CLP</strong> / sesión</p>
+      </div>
+      <div class="bg-[#FFF0F3] p-6 rounded-2xl shadow-md">
+        <h4 class="text-xl font-semibold text-[#AB4F6B] mb-2">Terapia para adolescentes</h4>
+        <p class="text-gray-700"><strong>$30.000 CLP</strong> / sesión</p>
+      </div>
     </div>
   </section>
 
   <section id="blog" class="px-4 py-12 bg-[#f4f4f4]">
     <h2 class="text-3xl font-bold text-center text-[#494a49] mb-8">Blog</h2>
 
-    <!-- Carrusel centrado sin flechas -->
-    <div class="overflow-hidden">
-      <div id="carousel"
-        class="flex justify-center gap-6 overflow-x-auto scroll-smooth snap-x snap-mandatory px-6 hide-scrollbar">
+    <!-- Contenedor del carrusel con flechas a los lados -->
+    <div class="flex items-center justify-center relative">
+      <!-- Flecha izquierda (solo en pantallas grandes) -->
+      <button id="prev"
+        class="absolute left-4 top-1/2 transform -translate-y-1/2 bg-[#AB4F6B] text-white w-10 h-10 rounded-full shadow-lg hidden md:block border-2 border-[#AB4F6B] flex items-center justify-center">
+        &#8592;
+      </button>
+
+      <!-- Carrusel -->
+      <div id="carousel" class="flex gap-6 overflow-x-auto scroll-smooth hide-scrollbar w-[1100px] mx-[50px] py-4">
         <!-- Card 1 -->
-        <div class="w-[260px] sm:w-[280px] flex-shrink-0 bg-white rounded-2xl shadow-lg overflow-hidden snap-center">
+        <div class="w-[260px] sm:w-[280px] flex-shrink-0 bg-white rounded-2xl overflow-hidden">
           <img src="images/image-gallery/image_1.jpg" class="w-full h-48 object-cover" />
           <div class="p-4">
             <h3 class="text-lg font-semibold text-[#494a49] mb-1">Ansiedad</h3>
@@ -239,7 +297,7 @@
         </div>
 
         <!-- Card 2 -->
-        <div class="w-[260px] sm:w-[280px] flex-shrink-0 bg-white rounded-2xl shadow-lg overflow-hidden snap-center">
+        <div class="w-[260px] sm:w-[280px] flex-shrink-0 bg-white rounded-2xl overflow-hidden">
           <img src="images/image-gallery/image_2.jpg" class="w-full h-48 object-cover" />
           <div class="p-4">
             <h3 class="text-lg font-semibold text-[#494a49] mb-1">Autoestima</h3>
@@ -249,7 +307,7 @@
         </div>
 
         <!-- Card 3 -->
-        <div class="w-[260px] sm:w-[280px] flex-shrink-0 bg-white rounded-2xl shadow-lg overflow-hidden snap-center">
+        <div class="w-[260px] sm:w-[280px] flex-shrink-0 bg-white rounded-2xl overflow-hidden">
           <img src="images/image-gallery/image_3.jpg" class="w-full h-48 object-cover" />
           <div class="p-4">
             <h3 class="text-lg font-semibold text-[#494a49] mb-1">Mindfulness</h3>
@@ -257,11 +315,37 @@
             <a href="#" class="inline-block px-4 py-2 bg-[#AB4F6B] text-white rounded-full text-sm">LEER ARTÍCULO</a>
           </div>
         </div>
+
+        <!-- Card 4 -->
+        <div class="w-[260px] sm:w-[280px] flex-shrink-0 bg-white rounded-2xl overflow-hidden">
+          <img src="images/image-gallery/image_4.jpg" class="w-full h-48 object-cover" />
+          <div class="p-4">
+            <h3 class="text-lg font-semibold text-[#494a49] mb-1">Estrés</h3>
+            <p class="text-gray-600 text-sm mb-3">Gestionar el estrés y sus efectos en tu vida.</p>
+            <a href="#" class="inline-block px-4 py-2 bg-[#AB4F6B] text-white rounded-full text-sm">LEER ARTÍCULO</a>
+          </div>
+        </div>
+
+        <!-- Card 5 -->
+        <div class="w-[260px] sm:w-[280px] flex-shrink-0 bg-white rounded-2xl overflow-hidden">
+          <img src="images/image-gallery/image_3.jpg" class="w-full h-48 object-cover" />
+          <div class="p-4">
+            <h3 class="text-lg font-semibold text-[#494a49] mb-1">Relaciones</h3>
+            <p class="text-gray-600 text-sm mb-3">Mejorar la comunicación y conexión en las relaciones.</p>
+            <a href="#" class="inline-block px-4 py-2 bg-[#AB4F6B] text-white rounded-full text-sm">LEER ARTÍCULO</a>
+          </div>
+        </div>
+
+        <!-- Añadir más tarjetas aquí si es necesario -->
       </div>
+
+      <!-- Flecha derecha (solo en pantallas grandes) -->
+      <button id="next"
+      class="absolute right-4 top-1/2 transform -translate-y-1/2 bg-[#AB4F6B] text-white w-10 h-10 rounded-full shadow-lg hidden md:block border-2 border-[#AB4F6B] flex items-center justify-center">
+      &#8594;
+      </button>
     </div>
   </section>
-
-
 
   <section id="galeria" class="bg-white py-16 px-6">
     <div class="max-w-6xl mx-auto text-center mb-12">
@@ -314,7 +398,7 @@
 
       <!-- Imagen 7 -->
       <div class="overflow-hidden rounded-2xl shadow-md">
-        <img src="images/image-gallery/image_1.jpg" alt="Galería 7"
+        <img src="images/image-gallery/image_3.jpg" alt="Galería 7"
           class="w-full h-60 object-cover hover:scale-105 transition-transform duration-300 cursor-pointer"
           onclick="openLightbox(this.src)">
       </div>
@@ -330,7 +414,6 @@
       <button onclick="closeLightbox()"
         class="absolute top-6 right-6 text-white text-3xl font-bold hover:text-[#AB4F6B] transition-colors duration-300">&times;</button>
     </div>
-
   </section>
 
 
@@ -397,16 +480,6 @@
   </script>
 
   <script>
-    const carousel = document.getElementById('carousel');
-    document.getElementById('prev').onclick = () => {
-      carousel.scrollBy({ left: -300, behavior: 'smooth' });
-    };
-    document.getElementById('next').onclick = () => {
-      carousel.scrollBy({ left: 300, behavior: 'smooth' });
-    };
-  </script>
-
-  <script>
     function openLightbox(src) {
       const lightbox = document.getElementById("lightbox");
       const content = document.getElementById("lightbox-content");
@@ -441,8 +514,28 @@
     }
   </script>
 
+  <!-- Script para mover el carrusel -->
+  <script>
+    const prevButton = document.getElementById("prev");
+    const nextButton = document.getElementById("next");
+    const carousel = document.getElementById("carousel");
 
+    // Desplazamiento hacia la izquierda
+    prevButton.addEventListener("click", function () {
+      carousel.scrollBy({
+        left: -300,  // Desplazamiento hacia la izquierda
+        behavior: "smooth"
+      });
+    });
 
+    // Desplazamiento hacia la derecha
+    nextButton.addEventListener("click", function () {
+      carousel.scrollBy({
+        left: 300,  // Desplazamiento hacia la derecha
+        behavior: "smooth"
+      });
+    });
+  </script>
 
   <script src="https://kit.fontawesome.com/tu_id_de_kit.js" crossorigin="anonymous"></script>
 
